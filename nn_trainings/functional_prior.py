@@ -135,7 +135,7 @@ if __name__ == '__main__':
     xs = jnp.linspace(0, 10, 20).reshape(-1, 1)
     ys = jnp.sin(xs)
 
-    model = NNTraining(x_dim=1, y_dim=1, prior_h=0.1, features=[100, 100, 100, 100, 20], nll_scale=0.1)
+    model = NNTraining(x_dim=1, y_dim=1, prior_h=0.1, features=[100, 100, 20], nll_scale=0.1)
     model.fit_model(xs=xs, ys=ys, num_steps=1000)
 
     test_xs = jnp.linspace(0, 10, 100).reshape(-1, 1)
